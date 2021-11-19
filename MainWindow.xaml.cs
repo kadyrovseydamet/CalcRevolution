@@ -87,5 +87,10 @@ namespace CalcRevolution
             if (action == "/") // делит переменную и объект, сконвертировав в число с плавающей точкой
                 label1.Content = Convert.ToDouble(numbers2) / Convert.ToDouble(label1.Content);
         }
+
+        private void button18_Click(object sender, RoutedEventArgs e)
+        {
+            label1.Content = 1 / Convert.ToDouble(label1.Content);
+        }
     }
 }
