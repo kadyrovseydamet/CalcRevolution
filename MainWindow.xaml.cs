@@ -86,11 +86,20 @@ namespace CalcRevolution
                 label1.Content = Convert.ToDouble(label1.Content) * Convert.ToDouble(numbers2);
             if (action == "/") // делит переменную и объект, сконвертировав в число с плавающей точкой
                 label1.Content = Convert.ToDouble(numbers2) / Convert.ToDouble(label1.Content);
+            if (action == "%") // находит процент от числа
+                label1.Content = Convert.ToDouble(numbers2) * Convert.ToDouble(label1.Content) / 100;
         }
 
-        private void button18_Click(object sender, RoutedEventArgs e)
+        private void button18_Click(object sender, RoutedEventArgs e) // при вводе числа или числел и нажатия на кнопку "1/x"
         {
             label1.Content = 1 / Convert.ToDouble(label1.Content);
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e) // при вводе числа или числел и нажатия "+/-"
+        {
+            double plusminus = Convert.ToDouble(label1.Content);
+            double plusminus1 = -plusminus; // меняет + на - и обратно
+            label1.Content = Convert.ToString(plusminus1);
         }
     }
 }
