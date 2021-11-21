@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalcRevolution"
         mc:Ignorable="d"
-        Title="CalcRevolution" Height="600" Width="350" Icon="C:\Users\kadyr\source\repos\CalcRevolution\bin\Debug\Файлы проекта\Calculator.ico" WindowStartupLocation="CenterScreen" Background="#282828" MinWidth="350" MinHeight="600">
+        Title="CalcRevolution" Height="600" Width="350" Icon="C:\Users\kadyr\source\repos\CalcRevolution\bin\Debug\Файлы проекта\Calculator.ico" WindowStartupLocation="CenterScreen" Background="#282828" MinWidth="380" MinHeight="600">
     <Grid>
-        <Label x:Name="label1" FontSize="50" Content="0" FontFamily="Segoe UI Semibold" Foreground="White" Grid.Row="1" Margin="1,18,0,19" Grid.RowSpan="2" Grid.ColumnSpan="4" Cursor="No"/>
+        <Label x:Name="label1" FontSize="50" Content="0" FontFamily="Segoe UI Semibold" Foreground="White" Grid.Row="1" Margin="1,18,2,17" Grid.RowSpan="2" Grid.ColumnSpan="4" Cursor="None" Background="{x:Null}"/>
         <Button x:Name="button1" FontSize="27" Content="+/-" Grid.Column="0" Grid.Row="9" FontFamily="Segoe UI Semilight" Foreground="White" Background="#FF1D1D1D" Click="button1_Click"/>
         <Button x:Name="button2" FontSize="27" Content="0" Grid.Column="1" Grid.Row="9" FontFamily="Segoe UI Light" Foreground="White" Background="#FF0A0A0A" Click="button5_Click"/>
         <Button x:Name="button3" FontSize="27" Content="," Grid.Column="2" Grid.Row="9" FontFamily="Segoe UI Semilight" Foreground="White" Background="#FF1D1D1D" Click="button3_Click"/>

@@ -52,10 +52,17 @@ namespace CalcRevolution
 
         private void button20_Click(object sender, RoutedEventArgs e) // нажатие на действия "+, -, *, /"
         {
-            Button action2 = (Button)sender; // записывает на какое из четырех действий нажали
-            action = Convert.ToString(action2.Content); // переменная action принимает текст action2("+, -, *, /")
-            numbers2 = Convert.ToString(label1.Content); // в переменную number2 записывается первые числа
-            label1.Content = "0"; // после нажатия на экране загарется "0"
+            if (Convert.ToString(label1.Content) == "0" || Convert.ToString(label1.Content) == "") // если label равен нулю или пустой строке, то...
+            {
+                label1.Content = "-"; // написать минус
+            }
+            else // иначе выполнить это условие
+            {
+                Button action2 = (Button)sender; // записывает на какое из пяти действий нажали
+                action = Convert.ToString(action2.Content); // переменная action принимает текст action2("+, -, *, /")
+                numbers2 = Convert.ToString(label1.Content); // в переменную number2 записывается первые числа
+                label1.Content = "0"; // после нажатия на экране загарется "0"
+            }
         }
 
         private void button21_Click(object sender, RoutedEventArgs e) // при нажатии на эту кнопку стирается последний символ
@@ -87,7 +94,7 @@ namespace CalcRevolution
             if (action == "/") // делит переменную и объект, сконвертировав в число с плавающей точкой
                 label1.Content = Convert.ToDouble(numbers2) / Convert.ToDouble(label1.Content);
             if (action == "%") // находит процент от числа
-                label1.Content = Convert.ToDouble(numbers2) * Convert.ToDouble(label1.Content) / 100 + "%";
+                label1.Content = Convert.ToDouble(numbers2) / 100 * Convert.ToDouble(label1.Content);
         }
 
         private void button18_Click(object sender, RoutedEventArgs e) // при вводе числа или числел и нажатия на кнопку "1/x"
