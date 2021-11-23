@@ -41,7 +41,7 @@ namespace CalcRevolution
         private void button3_Click(object sender, RoutedEventArgs e) // нажатие на запятую
         {
             Button numbers1 = (Button)sender; // опять добавил запись в numbers1 нажатой кнопки
-            if (!Convert.ToString(label1.Content).Contains(Convert.ToString("."))) // если в label есть запятая, то вторую написать уже нельзя
+            if (!Convert.ToString(label1.Content).Contains(Convert.ToString(","))) // если в label есть запятая, то вторую написать уже нельзя
             {
                 label1.Content += Convert.ToString(numbers1.Content);
             }
